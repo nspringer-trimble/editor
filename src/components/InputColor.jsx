@@ -57,6 +57,12 @@ export default class InputColor extends React.Component {
     this.setState({ pickerOpened: !this.state.pickerOpened })
   }
 
+  openPicker = () => {
+    if(!this.state.pickerOpened){
+      this.setState({ pickerOpened: true })
+    }
+  }
+
   get color() {
     // Catch invalid color.
     try {
@@ -115,7 +121,7 @@ export default class InputColor extends React.Component {
 
     return <div className="maputnik-color-wrapper">
       {this.state.pickerOpened && picker}
-      <div className="maputnik-color-swatch" style={swatchStyle}></div>
+      <div className="maputnik-color-swatch" style={swatchStyle} onClick={this.openPicker}></div>
       <input
         aria-label={this.props['aria-label']}
         spellCheck="false"
