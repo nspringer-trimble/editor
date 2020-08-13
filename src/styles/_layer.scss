@@ -152,9 +152,10 @@
     font-size: $font-size-6;
     color: $color-lowgray;
     background-color: lighten($color-black, 2);
+    cursor: pointer;
     user-select: none;
     padding: $margin-2;
-
+    margin-top: $margin-1;
     &:focus-within {
       border: solid 1px $color-lowgray;
     }
@@ -174,6 +175,8 @@
 
   &-group-title {
     vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 0.03em;
   }
 
   &-group-content {
@@ -185,12 +188,13 @@
 .maputnik-layer-editor-group {
   font-weight: bold;
   font-size: $font-size-5;
-  background-color: lighten($color-black, 2);
+  background-color: lighten($color-black, 5);
   color: $color-white;
   cursor: pointer;
   user-select: none;
   line-height: 20px;
-  border-top: solid 1px #36383e;
+  border-top: solid 1px lighten($color-black, 15);
+  padding-left: $margin-2;
 
   &__button {
     flex: 1;

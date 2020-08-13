@@ -164,6 +164,7 @@
   margin: $margin-3;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   &-label {
     color: $color-lowgray;
@@ -171,6 +172,7 @@
     width: 32%;
     vertical-align: top;
     font-size: 12px;
+    align-self: flex-start;
   }
 
   &-action {
@@ -195,9 +197,10 @@
   }
 
   .maputnik-input-block-action {
-    vertical-align: top;
+    margin-top: $margin-1;
     display: inline-block;
     width: 18%;
+    align-self: flex-start;
   }
 
   .maputnik-input-block-action > div {
