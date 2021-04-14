@@ -177,7 +177,10 @@ export default class App extends React.Component {
     })
 
     const styleUrl = initialStyleUrl()
-    if(styleUrl && window.confirm("Load style from URL: " + styleUrl + " and discard current changes?")) {
+     // && window.confirm("Load style from URL: " + styleUrl + " and discard current changes?")
+    //get GUID from Studio App and make a service call to fetch JSON from the guidand set it to styleUrl.
+    //in the style param query string we will receive guid. we need to maintain the guid in the url 
+    if(styleUrl) {
       this.styleStore = new StyleStore()
       loadStyleUrl(styleUrl, mapStyle => this.onStyleChanged(mapStyle))
       removeStyleQuerystring()

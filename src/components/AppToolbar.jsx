@@ -126,7 +126,10 @@ export default class AppToolbar extends React.Component {
       export: false,
     }
   }
-
+  closeClick(evt){
+    // will be updated with guid and calling map edit screen of studio
+    window.open(`http://localhost:4200`, '_self');
+  }
   handleSelection(val) {
     this.props.onSetMapState(val);
   }
@@ -274,10 +277,14 @@ export default class AppToolbar extends React.Component {
             <MdHelpOutline />
             <IconText>Help</IconText>
           </ToolbarLink>
-          <ToolbarLinkHighlighted href={"https://gregorywolanski.typeform.com/to/cPgaSY"}>
+          <ToolbarAction wdKey="nav:settings" onClick={(e) => {this.closeClick(e) }}>
+            
+            <IconText>Close</IconText>
+          </ToolbarAction>
+          {/* <ToolbarLinkHighlighted href={"https://gregorywolanski.typeform.com/to/cPgaSY"}>
             <MdAssignmentTurnedIn />
             <IconText>Take the Maputnik Survey</IconText>
-          </ToolbarLinkHighlighted>
+          </ToolbarLinkHighlighted> */}
         </div>
       </div>
     </nav>

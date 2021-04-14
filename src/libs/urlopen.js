@@ -26,6 +26,7 @@ export function loadStyleUrl(styleUrl, cb) {
 }
 
 export function removeStyleQuerystring() {
+   //from studio App we will get guid in style query string Param we need to maintain in the url.
   const initialUrl = url.parse(window.location.href, true)
   let qs = querystring.parse(window.location.search.slice(1))
   delete qs["style"]
